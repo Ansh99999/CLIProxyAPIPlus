@@ -3,11 +3,11 @@
 host: ''
 
 # Server port
-port: 8317
+port: ${PORT}
 
 # TLS settings for HTTPS. When enabled, the server listens with the provided certificate and key.
 tls:
-  enable: false
+  enable: true
   cert: ''
   key: ''
 
@@ -15,7 +15,7 @@ tls:
 remote-management:
   # Whether to allow remote (non-localhost) management access.
   # When false, only localhost can access management endpoints (a key is still required).
-  allow-remote: false
+  allow-remote: true
 
   # Management key. If a plaintext value is provided here, it will be hashed on startup.
   # All management requests (even from localhost) require this key.
